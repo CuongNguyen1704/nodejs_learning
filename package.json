@@ -1,0 +1,29 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CuongNguyen1704/nodejs_learning.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "nmcuong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CuongNguyen1704/nodejs_learning/issues"
+  },
+  "homepage": "https://github.com/CuongNguyen1704/nodejs_learning#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
