@@ -19,7 +19,7 @@ app.set('view engine', 'hbs');
 app.set('views', './src/resources/views');
 
 // Logger
-app.use(morgan('combined'));
+// app.use(morgan('combined'));
 
 // Route
 app.get('/', (req, res) => {
@@ -28,7 +28,10 @@ app.get('/', (req, res) => {
 app.get('/news', (req, res) => {
     res.render('news'); // sẽ tìm file home.handlebars trong thư mục views
 });
-
+app.get('/search', (req, res) => {
+     console.log(req.query.q) // lấy ra 
+    res.render('search'); // sẽ tìm file search.handlebars trong thư mục views
+});
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
