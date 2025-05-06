@@ -26,10 +26,11 @@ app.get('/', (req, res) => {
     res.render('home'); // sẽ tìm file home.handlebars trong thư mục views
 });
 app.get('/news', (req, res) => {
+    console.log(req.query.q)
     res.render('news'); // sẽ tìm file home.handlebars trong thư mục views
 });
 app.get('/search', (req, res) => {
-     console.log(req.query.q) // lấy ra 
+    //  console.log(req.query.q) // lấy ra 
     res.render('search'); // sẽ tìm file search.handlebars trong thư mục views
 });
 app.listen(port, () => {
