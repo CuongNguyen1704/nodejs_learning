@@ -1,1 +1,17 @@
-<h1>HOME PAGE</h1>
+<div class="row" style="display: flex; margin:20px;">
+    {{#each courses }}
+
+
+    <div class="card" style="width: 18rem; margin-right: 20px;">
+        <img src="{{this.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <a href="#" class="btn btn-primary">Mua ngay</a>
+        </div>
+    </div>
+
+
+    {{/each}}
+
+</div>
