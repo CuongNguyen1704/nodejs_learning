@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
+const methodOverride = require('method-override');
 
 const app = express();
 const port = 3000;
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded()); // dùng để phân tích dữ liệu form từ HTML gửi lên bằng phương thức post (giúp đọc được req.body)
 app.use(express.json());
+
+app.use(methodOverride('_method'))
 
 // Setup Handlebars
 // khai báo template engin tên là hbs

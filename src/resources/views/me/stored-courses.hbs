@@ -1,0 +1,31 @@
+<h3>Khóa học của tôi</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            
+            <th scope="col">Mô tả</th>
+            <th scope="col">Tên khóa học</th>
+            <th scope="col">Trình độ</th>
+            <th scope="col">Thời gian tạo</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+          {{#each courses}}
+            
+             <tr>
+                <td>{{@index}}</td>
+                <td>{{this.description}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.level}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>
+                    <a href="/courses/{{this._id}}/edit" class="btn btn-warning">Sửa</a href="">
+                    <a href="" class="btn btn-danger">Xóa</a href="">
+                </td>
+             </tr>
+          {{/each }}
+    </tbody>
+</table>
